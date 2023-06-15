@@ -1,0 +1,102 @@
+@charset "utf-8";
+/*
+    [ Shortcode Stylesheet ]
+    <?xml version="1.0" encoding="UTF-8"?>
+    Theme Name: Mrittik - Architecture Theme
+    Version: 1.0
+    Author: WPThemeBooster
+    Author URI: www.wpthemebooster.com
+    Description: Mrittik - Architecture Theme.
+    Date: 30/10/2022
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+#01  Fonts Import
+#02  Bootstrap Import
+#03  Plugins
+#04  Other CSS
+    4-1. Button
+    4-2. Menu
+    4-3. Slider
+    4-4. Funfact
+    4-5. Projects
+    4-6. Testimonial
+    4-7. Sidebar
+    4-8. Blog
+    4-9. Footer
+    4-10. ABout
+    4-11. Iconbox
+    4-12. Team
+    4-13. Shop
+    4-14. Cart
+    4-15. Checkout
+    4-16. Global
+    4-17. Responsive
+    4-18. Light Color File
+-----------------------------------------------------------------*/
+
+// Theme Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@font-face {
+    font-family: 'saol_displayregular';
+    src: url('../fonts/SaolDisplay/saoldisplay-regular-webfont.woff2') format('woff2'),
+         url('../fonts/SaolDisplay/saoldisplay-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+// px to rem convert files
+@import 'pxtorem';
+
+// Default variable overrides
+@import 'variables';
+
+// Import Bootstrap Functions
+@import '../node_modules/bootstrap/scss/mixins/utilities';
+
+// Import Bootstrap files
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+// rfs customize
+// RFS
+$rfs-unit: rem;
+$rfs-breakpoint: 1400;
+$rfs-breakpoint-unit: px;
+$rfs-factor: 10;
+// Responsive Font Size
+@import '../node_modules/rfs/scss';
+
+// Import Bootstrap Icons
+@import url('../fonts/bootstrap-icons/font/bootstrap-icons.css');
+
+// Other Plugins
+@import url('../../plugins/menu/ma5-menu.css');
+@import url('../../plugins/select2/css/select2.css');
+@import url('../../plugins/jquery_ui/style.css');
+@import url('../../plugins/swiper/swiper-bundle.min.css');
+@import url('../../plugins/cursor-effect/cursor-effect.css');
+@import url('../../plugins/aos/aos.css');
+@import url('../../plugins/fancybox/jquery.fancybox.css');
+
+@import 'reset';
+@import 'button';
+@import 'menu';
+@import 'slider';
+@import 'funfact';
+@import 'projects';
+@import 'testimonial';
+@import 'sidebar';
+@import 'blog';
+@import 'footer';
+@import 'about';
+@import 'iconbox';
+@import 'team';
+@import 'shop';
+@import 'cart';
+@import 'checkout';
+@import 'global';
+@import 'responsive';
+// Theme Light Color
+@import 'light';

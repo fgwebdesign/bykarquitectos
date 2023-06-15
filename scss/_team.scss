@@ -1,0 +1,179 @@
+/*------- Team -------*/
+.team {
+    padding-bottom: 50px;
+    &.in-team {
+        .team-block {
+            margin-bottom: $_70px;
+        }
+    }
+}
+.swiper_team {
+    @include padding($_0px $_100px);
+    .swiper-navigation {
+        width: 100%;
+        height: calc(var(--button-height));
+        top: 40%;
+        bottom: auto;
+        .swiper-button-prev, .swiper-rtl .swiper-button-next {
+            left: 0;
+            right: auto;
+        }
+        .swiper-button-next, .swiper-rtl .swiper-button-prev {
+            left: auto;
+            right: 0;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            font-size: $_30px;
+            color: $gray-300;
+            background: transparent;
+            top: 0;
+            &:hover {
+                background: transparent;
+                color: $olive;
+            }
+        }
+        .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+            opacity: 0.5;
+            background: transparent;
+        }
+    }
+    &:hover {
+        .swiper-navigation {
+            .swiper-button-prev {
+                top: 0;
+            }
+            .swiper-button-next {
+                top: 0;
+            }
+        }
+    }
+}
+.team-block{
+    h5{
+        @include rfs ($_26px, line-height);
+        @include margin-top($_25px);
+    }
+    h6{
+        @include font-size($_11px);
+        @include margin-top($_20px);
+        display: -webkit-inline-box;
+        display: -moz-inline-box;
+        position: relative;
+        &:after{
+            position: absolute;
+            content: "";
+            background: $olive;
+            width: 52px;
+            height: 1px;
+            right: -67px;
+            top: 5px;
+        }
+    }
+}
+
+.team-member-information{
+    .name{
+        @include font-size($_48px);
+        font-weight: $font-weight-normal;
+        @include rfs ($_58px, line-height);
+        @include margin-top($_0px);
+    }
+    .designation{
+        @include font-size($_22px);
+        font-weight: $font-weight-semibold;
+        @include rfs ($_44px, line-height);
+        @include margin-top($_0px);
+        display: -webkit-inline-box;
+        display: -moz-inline-box;
+        position: relative;
+        &:after{
+            position: absolute;
+            content: "";
+            background: $olive;
+            width: 110px;
+            height: 2px;
+            left: calc(100% + 15px);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    .bio {
+        margin-top: $_15px
+    }
+    .social-media{
+        margin-top: $_30px;
+        margin-bottom: $_60px;
+        ul{
+            margin: 0px;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            li{
+                width: auto;
+                background-image: none;
+                margin-right: 10px;
+                padding: 0px;
+                font-weight: $font-weight-semibold;
+                a{
+                    display: block;
+                    font-size: $_18px;
+                    text-align: center;
+                    background: $dark-400;
+                    color: $white;
+                    width: 46px;
+                    height: 46px;
+                    border-radius: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                &:last-child{
+                    margin-right: 0px;
+                }
+            }
+        }
+    }
+
+    h6.widget-title {
+        color: $white;
+        margin-bottom: $_10px
+    }
+
+    ul.point_order{        
+        @include padding-left ($_0px);
+        @include margin-bottom ($_35px);
+        list-style-type: none;
+        li{
+            position: relative;
+            padding-left: 35px;
+            line-height: 36px;
+            font-size: $_16px;
+            color: $white;
+            span {
+                color: $olive;
+            }
+            &:first-letter{
+                text-transform: capitalize
+            }
+            &:before{
+                content: '\F26F';
+                font-family: 'bootstrap-icons';
+                font-size: $_24px;
+                position: absolute;
+                left: 0;
+                color: $olive;
+            }
+        }
+    }
+}
+
+.team-details {
+    .latest-projects {
+        margin-top: 100px;
+    }
+    .project {
+        margin-bottom: $_30px;
+    }
+}

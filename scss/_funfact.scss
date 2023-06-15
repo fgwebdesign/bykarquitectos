@@ -1,0 +1,71 @@
+.funfacts_inner{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-flow: row wrap;
+    .funfact{
+        .funfact_content{
+            h2{
+                color: $white;
+                @include font-size($_64px);
+                font-weight: $font-weight-semibold;
+                @include rfs($_64px, line-height);
+            }
+            span{
+                color: $white;
+                @include font-size($_64px);
+                font-weight: $font-weight-semibold;
+                @include rfs($_64px, line-height);
+            }
+            p{
+                @include font-size($_20px);
+                font-weight: $font-weight-semibold;
+                @include rfs($_25px, line-height);
+                @include margin-top($_25px);
+                color: $white;
+            }
+        }
+    }
+}
+
+.funfacts_inner{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-flow: row wrap;
+    .funfact2{
+        .fun_img {
+            width: $_70px;
+            height: $_70px;
+            line-height: $_66px;
+            border: $_1px dashed $white;
+            border-radius: 100%;
+            flex-shrink: 0;
+            margin-right: $_20px;
+        }
+        .funfact_content{
+            h2{
+                @include font-size($_24px);
+                font-weight: $font-weight-semibold;
+                @include rfs($_32px, line-height);
+                color: $white;
+                margin-top: $_0px;
+                margin-bottom: $_0px;
+            }
+            span{
+                @include font-size($_24px);
+                font-weight: $font-weight-semibold;
+                @include rfs($_32px, line-height);
+                color: $white;
+            }
+            p{
+                @include font-size($_14px);
+                font-weight: $font-weight-semibold;
+                @include rfs($_28px, line-height);
+                text-transform: uppercase;
+                color: $white;
+                margin-bottom: $_0px;
+            }
+        }
+    }
+}

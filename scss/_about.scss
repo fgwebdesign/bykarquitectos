@@ -1,0 +1,81 @@
+.about_image {
+    position: relative;
+    img{
+        &:last-child{
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+        }
+    }
+}
+
+.about_text_inner {
+    padding-left: $_45px;
+}
+.about_text {
+    margin-bottom: 35px;
+    h2{
+        @include font-size ($_48px);
+        line-height: $_59px;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+    }
+}
+.mission {
+    padding-top: 230px;
+}
+.mission_top_part {
+    margin-bottom: $_70px;
+    .section-header{
+        margin-bottom: 180px;
+       @include padding (0px 30px);
+        p{
+            @include font-size($_30px);
+            @include rfs($_50px, line-height);
+            @include margin-top($_30px);
+            letter-spacing: -1px;
+            font-weight: $font-weight-light;
+        }
+    }
+    .has_line::before {
+        bottom: calc(100% + 50px);
+    }
+}
+
+.mission_bottom_part {
+    .section-header{
+        .border-line{
+            position: relative;
+            text-align: right;
+            &::after{
+                position: absolute;
+                content:""; 
+                background: $white;
+                width: 124px;
+                height: 2px;
+                bottom: -20px;
+                right: 0px;
+            }
+        }
+    }
+    .mission_content{
+        p{
+            @include margin-bottom($_20px);
+            &:last-child{
+                @include margin-bottom(0)
+            }
+        }
+    }
+}
+
+.about_para{
+    @include font-size($_64px);
+    @include rfs($_80px, line-height);
+    font-weight: $font-weight-light;
+    letter-spacing: -1px;
+    span{
+        border-bottom: 1px solid $gray-600;
+        font-weight: $font-weight-normal;
+        color: $gray-500;
+    }
+}

@@ -1,0 +1,104 @@
+/*------- Testimonial -------*/
+.testimonial {
+    .container-fluid {
+        padding: 0px;
+    }
+}
+
+.testimonial_inner{
+    position: relative;
+    @include padding (150px 0px 110px 0px);
+    z-index: 1;
+    &::before{
+        position: absolute;
+        content: "";
+        background: url(../../assets/img/bg/bg_t_1.png);
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        bottom: 0;
+    }
+    &::after{
+        position: absolute;
+        content: "";
+        background: url(../../assets/img/bg/bg_t_2.png);
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: left center;
+        top: 0;
+    }
+}
+.testimonial-block{
+    position: relative;
+    z-index: 1;
+    h6{
+        margin-top: 30px;
+        position: relative;
+        display: -webkit-inline-box;
+        display: -moz-inline-box;
+        &::before{
+            position: absolute;
+            content: "";
+            background: $white;
+            width: 14px;
+            height: 2px;
+            left: -27px;
+            top: 8px;
+        }
+    }
+}
+.swiper_testimonial{
+    padding-bottom: 50px;
+    .swiper-slide.swiper-slide-active{
+        .testimonial-block{
+            p{
+                color: $white;
+            }
+        }
+    }
+}
+
+
+// Service Pages
+.page_header {
+    &.in-service {
+        .page_header_inner {
+            background: transparent;
+            &::before {
+                display: none;
+            }
+            .page_header_content .heading {
+                font-weight: $font-weight-bold;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+.header-layer-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/bg/bg-2.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+.testimonial {
+    &.in-service {
+        position: relative;
+        z-index: 3;
+        background: transparent
+    }
+}
+
+.partners {
+    &.in-service {
+        .partner_flex {
+            margin-top: 0px;
+        }
+    }
+}
+

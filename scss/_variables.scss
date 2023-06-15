@@ -1,0 +1,161 @@
+// Custom Prefix
+$variable-prefix: 'mrittik-';
+
+$font-family-base:            'Montserrat', sans-serif;
+$font-family-second:          'saol_displayregular', sans-serif;
+
+$font-weight-lighter:         lighter;
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-medium:          500;
+$font-weight-semibold:        600;
+$font-weight-bold:            700;
+$font-weight-bolder:          bolder;
+
+$white:     #ffffff;
+
+$olive:    #a6a182;
+
+$dark-100: #1b1b1b;
+$dark-200: #212121;
+$dark-300: #2e2e2e;
+$dark-400: #545454;
+$dark-500: #262626;
+
+$gray-100:  #f2f2f2;
+$gray-200:  #f8f8f8;
+$gray-300:  #e6e6e6;
+$gray-400:  #b2b2b2;
+$gray-500:  #54595f; // text color
+$gray-600:  #999999; // text color
+
+$black:     #000000;
+
+
+// ===============================
+// Background Color 
+// ===============================
+
+// Dark Color BG 
+.bg-dark-100 {
+    background: $dark-100;
+}
+.bg-dark-200 {
+    background: $dark-200;
+}
+.bg-dark-300 {
+    background: $dark-300;
+}
+.bg-dark-400 {
+    background: $dark-400;
+}
+.bg-dark-500 {
+    background: $dark-500;
+}
+
+// Gray Color BG 
+.bg-gray-100 {
+    background: $gray-100;
+}
+.bg-gray-200 {
+    background: $gray-200;
+}
+.bg-gray-300 {
+    background: $gray-300;
+}
+.bg-gray-400 {
+    background: $gray-400;
+}
+.bg-gray-500 {
+    background: $gray-500;
+}
+.bg-gray-600 {
+    background: $gray-600;
+}
+
+// Others Color BG
+.bg-light {
+    background: $gray-200;
+}
+.bg-olive {
+    background: $olive;
+}
+
+
+// ===============================
+// Text Color 
+// ===============================
+
+// Dark Color Text 
+.text-dark-100 {
+    color: $dark-100;
+}
+.text-dark-200 {
+    color: $dark-200;
+}
+.text-dark-300 {
+    color: $dark-300;
+}
+.text-dark-400 {
+    color: $dark-400;
+}
+.text-dark-500 {
+    color: $dark-500;
+}
+
+// Gray Color Text 
+.text-gray-100 {
+    color: $gray-100;
+}
+.text-gray-200 {
+    color: $gray-200;
+}
+.text-gray-300 {
+    color: $gray-300;
+}
+.text-gray-400 {
+    color: $gray-400;
+}
+.text-gray-500 {
+    color: $gray-500;
+}
+.text-gray-600 {
+    color: $gray-600;
+}
+
+// Others Color Text
+.text-light {
+    color: $gray-200;
+}
+.text-olive {
+    color: $olive;
+}
+
+// scss-docs-start colors-map
+$colors: (
+    "dark":         $dark-100,
+    "black":        $black,
+    "white":        $white,
+    "gray":         $gray-100
+) !default;
+// // scss-docs-end colors-map
+
+// // scss-docs-start theme-colors-map
+$theme-colors: (
+    "dark":         $dark-100,
+    "black":        $black,
+    "white":        $white,
+    "gray":         $gray-100
+) !default;
+// scss-docs-end theme-colors-map
+
+
+
+$breakpoint-extralargedesktop: 1400px;
+$breakpoint-largedesktop: 1199px;
+$breakpoint-desktop: 991px;
+$breakpoint-tablet: 767px;
+$breakpoint-mobile: 600px;
+$breakpoint-minimobile: 500px;
+
+

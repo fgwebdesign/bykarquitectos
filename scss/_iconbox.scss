@@ -1,0 +1,189 @@
+.services {
+    &.inner {
+        .icon_box {
+            margin-bottom: $_90px;
+        }
+    }
+}
+.icon_box{
+    transition: all 0.5s ease-in-out;
+    h4{
+        margin-bottom: 20px;
+        margin-top: 15px;
+        text-transform: uppercase;
+        font-weight: $font-weight-semibold;
+    }
+    h6{
+        color: $olive;
+        margin-bottom: 8px;
+        transition: all 0.5s ease-in-out;
+    }
+    p {
+        font-size: $_14px;
+    }
+    img.light{
+        display: none;
+    }
+    .arrow_effect{
+        a{
+            position: relative;
+            width: 20px;
+            height: 15px;
+            overflow: hidden;
+            display: inline-block;
+            .crossline1,
+            .crossline2 {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                height: 1px;
+                display: inline-block;
+                transition: all 0.5s ease-in-out;
+                &::before,
+                &::after {
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    width: 7px;
+                    height: 1px;
+                    transform-origin: right;
+                    transition: all 0.5s ease-in-out;
+                }
+                &::before {
+                    transform: rotate(40deg);
+                }
+                &::after {
+                    transform: rotate(-40deg);
+                }
+            }
+
+            .crossline1 {
+                width: 15px;
+                background-color: $gray-300;
+                opacity: 1;
+                &::before,
+                &::after {
+                    background-color: $gray-300;
+                }
+                &::before {
+                    top: 0;
+                }
+                &::after {
+                    bottom: 0;
+                }
+            }
+            .crossline2 {
+                width: 0px;
+                background-color: $olive;
+                opacity: 0;
+                &::before,
+                &::after {
+                    background-color: $olive;
+                    transition: all 0.7s ease-in-out;
+                }                
+                &::before {
+                    top: -10px;
+                }
+                &::after {
+                    bottom: -10px;
+                }
+            }
+            &:hover {
+                .crossline1 {
+                    opacity: 0;
+                    transform: scale(0);
+                }
+                .crossline2 {
+                    width: 15px;
+                    opacity: 1;                
+                    &::before {
+                        top: 0px;
+                    }
+                    &::after {
+                        bottom: 0px;
+                    }
+                }
+            }
+        }
+        margin-top: 20px;
+    }
+    &:hover{
+        h6{
+            margin-bottom: 15px;
+        }
+    }
+
+    &.type-2 {
+        position: relative;
+        margin-bottom: $_30px;
+        .post-bg {
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease-out;   
+        }
+        .icon_box_inner{
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            padding: 50px 40px 55px 40px;
+            z-index: 1;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+            &::before {
+                content: '';
+                background: rgba(0, 0, 0, 0);
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                -webkit-transition: all 0.5s ease-in-out;
+                -moz-transition: all 0.5s ease-in-out;
+                transition: all 0.5s ease-in-out;
+            }
+        }
+        &:hover {
+            .post-bg{
+                opacity: 1;
+                visibility: visible;
+                transition: all 0.8s ease-in;   
+            }
+            .icon_box_inner {
+                padding-top: 100px;
+                &::before {
+                    background: rgba(0, 0, 0, 0.75);;
+                }
+            }
+        }
+    }
+}
+.icon_box_flex{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    h6{
+        margin-left: 15px;
+        color: $gray-400;
+    }
+    .icon_size{
+        border: 1px solid $dark-300;
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: 21px;
+            height: 21px;
+        }
+    }
+}
+.about_icon_box{
+    margin-bottom: 25px;
+}

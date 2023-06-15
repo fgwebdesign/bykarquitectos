@@ -1,0 +1,319 @@
+
+/* Forms (shipping_form) */
+.shipping_form {
+    .widget-title {
+        color: $white;
+        text-transform: capitalize;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__arrow,
+    .select2-container .select2-selection--single,
+    .select2-container--default .select2-selection--single .select2-selection__arrow{
+        height: 64px;
+        line-height: 64px;
+        right: 5px;
+        border: none;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__arrow b {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 0;
+        height: 5px;
+        display: inline-block;
+        border-color: #888 transparent transparent transparent;
+        border-style: solid;
+        border-width: 0px 0px 0 0px;
+        margin-left: 0;
+        margin-top: 0;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__arrow b::before {
+        content: "\F282";
+        font-family: 'bootstrap-icons';
+        font-size: 10px;
+    }
+    
+    
+    .select2-container--default .select2-selection--single .select2-selection__rendered,
+    .select2-container .select2-selection--single .select2-selection__rendered{
+        padding: 0px;
+        line-height: 64px;
+    }
+    .select2-container--default .select2-selection--multiple,
+    .select2-container--default .select2-selection--single{
+        display: block;
+        width: 100%;
+        height: 64px;
+        padding: 0px 40px;
+        font-size: $_14px;
+        line-height: 1.5;
+        background-color: $black;
+        background-clip: padding-box;
+        border: 1px solid $black;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        -webkit-backface-visibility: hidden;
+        box-sizing: border-box;
+        outline: none;
+        -webkit-appearance: none;
+        outline-offset: 0;
+    }
+    .select2-container--default .select2-selection--multiple:focus,
+    .select2-container--default .select2-selection--single:focus,
+    .select2-container--default.select2-container--focus .select2-selection--multiple,
+    .select2-container--default.select2-container--focus .select2-selection--single {
+        border-color: $olive;
+        outline: none;
+        outline-offset: 0px;
+    }
+    label{
+        display: block;
+        font-size: $_14px;
+        font-weight: $font-weight-normal;
+        line-height: $_20px;
+        text-transform: capitalize;
+        color: $white;
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+    .form-group{
+        margin-top: 10px;
+        margin-bottom: 15px;
+        display: inline-block;
+        width: 100%;
+    }
+    textarea.form-control {
+        height: 90px;
+    }
+    .form-control:focus {
+        background-color: $dark-300;
+        border: 1px solid #a6a182;
+        outline: 0;
+        box-shadow: none;
+    }
+
+    /* Coupon Code */
+    .have_coupon {
+        background: $dark-300;
+        border-left: 7px solid $dark-400;
+        padding: 30px 15px;
+        margin-bottom: 55px;
+        .form-group {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: center;
+            margin: 0px 0px;
+            label {
+                font-size: $_18px;
+                color: $white;
+                line-height: 26px;
+                margin-right: 12px;
+                margin-bottom: 0px;
+            }
+            input[type="text"] {
+                width: 250px;
+                height: 45px;
+            }
+        }
+        ::-webkit-input-placeholder {
+            font-weight: $font-weight-normal;
+            color: $gray-600;
+        }
+        ::-moz-placeholder { 
+            font-weight: $font-weight-normal;
+            color: $gray-600;
+        }
+        :-ms-input-placeholder { 
+            font-weight: $font-weight-normal;
+            color: $gray-600;
+        }
+        :-moz-placeholder { 
+            font-weight: $font-weight-normal;
+            color: $gray-600;
+        }
+        :placeholder { 
+            font-weight: $font-weight-normal;
+            color: $gray-600;
+        }
+    }
+    .form-check-input {
+        width: 12px;
+        height: 12px;
+        border: 1px solid $dark-400;
+        background-color: transparent;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .checkbox{        
+        display: inline-block;
+        position: relative;
+        padding-left: 25px;
+        cursor: pointer;        
+        font-size: $_14px;
+        font-weight: $font-weight-medium;
+        line-height: 16px;
+        margin-bottom: 0px;
+        color: $gray-600;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            left: 0;
+        }
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 15px;
+            width: 15px;
+            border-radius: 100%;
+            border: 1px solid $dark-400;
+            &:after {
+                content: "";
+                position: absolute;
+                display: none;
+                top: 3px;
+                left: 3px;
+                width: 7px;
+                height: 7px;
+                border-radius: 1000%;
+                background: $white;
+            }
+        }
+        &:hover input ~ .checkmark {
+            border: 1px solid $olive;
+        }
+        input:checked ~ .checkmark {
+            border: 1px solid $olive;
+            &:after {
+                display: block;
+            }
+        }
+    }
+
+}
+
+
+.place_order{
+    ul{
+        margin: 0px;
+        padding: 0px;
+        li{
+            list-style: none;
+            font-size: $_16px;
+            font-weight: $font-weight-normal;
+            line-height: $_24px;
+            padding: 14px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid $dark-400;
+            color: $gray-600;
+            &:first-child {
+                padding-top: 0px;
+            }
+            .form-group {
+                width: auto;
+                margin: 0px;
+            }
+            span.text {
+                min-width: 220px;
+                color: $white;
+            }
+            &.totalvalue{
+                color: $white;
+                font-weight: $font-weight-semibold;
+                span.text {                    
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    /* Customize Radio Button */
+    label.radio_circle {
+        display: inline-block;
+        position: relative;
+        padding-left: 25px;
+        cursor: pointer;        
+        font-size: $_14px;
+        font-weight: $font-weight-medium;
+        line-height: 16px;
+        margin-bottom: 0px;
+        color: $gray-600;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            left: 0;
+        }
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 15px;
+            width: 15px;
+            border-radius: 100%;
+            border: 1px solid $dark-400;
+            &:after {
+                content: "";
+                position: absolute;
+                display: none;
+                top: 3px;
+                left: 3px;
+                width: 7px;
+                height: 7px;
+                border-radius: 1000%;
+                background: $white;
+            }
+        }
+        &:hover input ~ .checkmark {
+            border: 1px solid $olive;
+        }
+        input:checked ~ .checkmark {
+            border: 1px solid $olive;
+            &:after {
+                display: block;
+            }
+        }
+    }
+
+    
+
+    .paymentmethod {
+        margin-top: 40px;
+        label.radio_circle {
+            display: block;
+            font-size: $_16px;
+            font-weight: $font-weight-semibold;
+            color: $white;
+            &:not(:last-child) {
+                padding-bottom: 25px;
+                margin-bottom: 25px;
+            }
+        }
+        span.text{
+            display: block;
+            font-size: $_14px;
+            font-weight: $font-weight-normal;
+            line-height: $_22px;
+            color: $gray-600;
+            margin-top: 10px;
+        }
+    }
+    .btn_group {
+        margin-top: 25px;
+    }
+}

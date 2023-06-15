@@ -1,0 +1,317 @@
+html {
+    scroll-behavior: smooth;
+    font-size: 100%;
+}
+body{
+    position: relative; // For locomotive, disable it
+    font-family: $font-family-base;
+    color: $black;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	transition: all 0.5s ease-in-out;
+    @include font-size ($_16px);
+    line-height: 26px;
+}
+
+.container {
+    position: relative;
+}
+.container-fluid, .container-lg, .container-xl, .container-xxl {
+    max-width: 1920px;
+    padding: 0px 40px;
+}
+
+
+// min-width: 992px
+@media screen and (min-width: 992px){    
+    .container-sm {
+        max-width: 970px;
+    }
+}
+// min-width: 1200px
+@media screen and (min-width: 1200px){
+    .container {
+        max-width: 1170px;
+    }
+}
+// max-width: 1600px
+@media screen and (min-width: 1600px) {
+    .container {
+        max-width: 1400px;
+    }
+    .container-sm {
+        max-width: 1170px;
+    }
+}
+// max-width: 1199px
+@media screen and (max-width: 1199px) {
+    .container {
+        max-width: 100%;
+    }
+}
+// min-width: 1200px
+@media screen and (max-width: 991px){
+    .container-sm {
+        max-width: 100%;
+    }
+}
+
+.wrapper {
+    position: relative;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: $font-family-base;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+h1{
+    @include font-size ($_48px);
+    font-weight: $font-weight-bold;
+}
+h2{
+    @include font-size ($_36px);
+    font-weight: $font-weight-bold;
+}
+h3{
+    @include font-size ($_30px);
+    font-weight: $font-weight-bold;
+}
+h4{
+    @include font-size ($_24px);
+    font-weight: $font-weight-bold;
+}
+h5{
+    @include font-size ($_20px);
+    font-weight: $font-weight-semibold;
+}
+h6{
+    @include font-size ($_16px);
+    font-weight: $font-weight-semibold;
+}
+
+p{
+    line-height: 26px;
+    font-weight: $font-weight-normal;
+}
+
+a{
+    color: $dark-100;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    outline: none;
+    &:hover{
+        color: $olive;
+        text-decoration: none;
+        outline: none;
+    }
+}
+.bg-dark {
+    color: $gray-600;
+    a {
+        color: $white;
+        &:hover, &.active {
+            color: $olive;
+        }
+    }
+}
+
+.clearfix{
+    clear: both;
+}
+.divider{
+    margin: 30px 0px;
+    display: inline-block;
+}
+table {
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+}
+table td, table th {
+    padding: 3px 10px;
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
+    text-align: center;
+}
+img{
+    max-width: 100%;
+}
+
+.section, section{
+    position: relative;
+    padding: 100px 0px;
+    z-index: 1;
+}
+
+.large_font{
+    position: absolute;
+    top: 85px;
+    width: 100%;
+    h2{
+        // @include font-size ($_291px);
+        @include font-size ($_240px);
+        @include rfs(216px, line-height);
+        letter-spacing: $_20px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+.large_font_bottom{
+    top: 217px;
+}
+
+/* Default Input type */
+select,
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"]{
+    display: block;
+    width: 100%;
+    height: 64px;
+    padding: 10px 40px;
+    font-size: $_12px; 
+    font-weight: $font-weight-semibold;
+    background-color: $black;
+    color: $gray-400;
+    background-clip: padding-box;
+    border-width: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    transition: all 0.5s ease-in-out;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    outline: none;
+    -webkit-appearance: none;
+    outline-offset: 0;
+}
+textarea.form-control{
+    display: block;
+    width: 100%;
+    height: 150px;
+    padding: 10px 40px;
+    font-size: $_12px; 
+    font-weight: $font-weight-semibold;
+    background-color: $black;
+    color: $gray-400;
+    background-clip: padding-box;
+    border-width: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    transition: all 0.5s ease-in-out;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    outline: none;
+    -webkit-appearance: none;
+    outline-offset: 0;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea.form-control:focus{
+    background-color: $dark-100;
+    border-color: $dark-100;
+    color: $white;
+    outline: none;
+    outline-offset: 0px;
+    box-shadow: none;
+    transition: all 0.5s ease-in-out;
+}
+
+label {
+    display: inline-block;
+    color: $gray-400;
+    font-size: $_12px; 
+    font-weight: $font-weight-semibold;
+    text-transform: uppercase;
+}
+
+::-webkit-input-placeholder {
+    color: $gray-400;
+    font-size: $_12px; 
+    font-weight: $font-weight-semibold;
+    text-transform: uppercase;
+}
+::-moz-placeholder {
+    color: $gray-400;
+    font-size: $_12px; 
+    font-weight: $font-weight-semibold;
+    text-transform: uppercase;
+}
+:-ms-input-placeholder {
+    color: $gray-400;
+    font-size: $_12px; 
+    font-weight: $font-weight-semibold;
+    text-transform: uppercase;
+}
+:-moz-placeholder {
+    color: $gray-400;
+    font-size: $_12px; 
+    font-weight: $font-weight-semibold;
+    text-transform: uppercase;
+}
+:placeholder {
+    color: $gray-400;
+    font-size: $_12px; 
+    font-weight: $font-weight-semibold;
+    text-transform: uppercase;
+}
+
+
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+    background-color: $white;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: $white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $dark-300;
+}
+
+
+
+.bg_1{
+    background: url('../../assets/img/bg/bg-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.bg_2{
+    background: url('../../assets/img/bg/bg-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
