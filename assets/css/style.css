@@ -11413,7 +11413,6 @@ section {
 
 .large_font {
   position: absolute;
-  top: 5px;
   width: 100%;
   align-items: center;
 }
@@ -14483,11 +14482,14 @@ label {
 
   .preloader-inner .loading-text {
     font-weight: 700;
-    font-size: 10px;
+    font-size: 5px;
     line-height: 10px;
     text-align: center;
     user-select: none;
     transition: all 0.5s ease-in-out;
+}
+.loading-text .characters {
+  font-size: 44px;
 }
 
   .large_font h2,
