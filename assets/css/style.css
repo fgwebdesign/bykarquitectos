@@ -42,6 +42,13 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Roadway';
+  src: url('../fonts/Roadway/Roadway.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 .bg-dark-100 {
   background: #1b1b1b;
@@ -255,7 +262,9 @@ h4,
 h5,
 .h5,
 h6,
-.h6 {
+.h6,
+p,
+.p {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
@@ -20527,7 +20536,8 @@ video {
 
 /* Loading text */
 .preloader-inner .loading-text {
-  font-weight: 700;
+  font-family: 'Roadway', sans-serif;
+  font-weight: 300;
   font-size: 60px;
   line-height: 60px;
   text-align: center;
