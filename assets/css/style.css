@@ -7249,6 +7249,7 @@ fieldset:disabled .btn {
 }
 
 @media (min-width: 768px) {
+
   .sticky-md-top {
     position: sticky;
     top: 0;
@@ -14484,6 +14485,10 @@ label {
 
 @media screen and (max-width: 767px) {
 
+  .services-list .service-item { 
+    text-align: left;
+}
+
   #preloader.hide .preloader-inner .loading-text {
     opacity: 0;
     visibility: hidden;
@@ -14505,6 +14510,10 @@ label {
   .large_font .h2 {
     font-size: 3rem;
   }
+
+   .floating_element h2 {
+    font-family: 'Roadway', sans-serif !important;
+}
 
   .large_font {
     font-size: 1rem;
@@ -16736,6 +16745,15 @@ label {
     right: 1.5625rem;
   }
 }
+
+.services-list .service-item {
+    font-size: 16px;
+    color: #FFF;
+    line-height: 1.5; 
+    font-weight: 400; 
+    text-align: right;
+}
+
 
 .totop::before {
   content: "";
@@ -19203,6 +19221,10 @@ label {
 }
 
 @media screen and (max-width: 767px) {
+
+  .services-list .service-item { 
+    text-align: left;
+}
   .cart_table {
     width: 100%;
     display: block;
@@ -20536,9 +20558,10 @@ video {
 
 /* Loading text */
 .preloader-inner .loading-text {
+  letter-spacing: -8px;
   font-family: 'Roadway', sans-serif;
-  font-weight: 300;
-  font-size: 60px;
+  font-weight: 200;
+  font-size: 80px;
   line-height: 60px;
   text-align: center;
   user-select: none;
