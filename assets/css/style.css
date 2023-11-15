@@ -49,6 +49,10 @@
   font-style: normal;
 }
 
+.text-chico {
+  font-size: 13px;
+  color: #fff;
+}
 
 .bg-dark-100 {
   background: #1b1b1b;
@@ -14505,6 +14509,7 @@ label {
 .loading-text .characters {
   font-size: 44px;
 }
+
 
   .large_font h2,
   .large_font .h2 {
